@@ -1,0 +1,84 @@
+.stopwatch {
+  /* background-color: white; */
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.time {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px;
+}
+button {
+  font-size: 20px;
+  font-weight: bold;
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #6c5b7c;
+  border: transparent;
+  margin: 5px;
+  margin-top: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.block {
+  position: relative;
+  /* border-radius: 20px; */
+  /* margin: 300px auto 0; */
+  /* width: 500px;
+  height: 250px; */
+  /* background: linear-gradient(0deg, #000, #272727); */
+}
+
+.block:before,
+.block:after {
+  content: "";
+  border-radius: 20px;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.block:after {
+  filter: blur(50px);
+}
